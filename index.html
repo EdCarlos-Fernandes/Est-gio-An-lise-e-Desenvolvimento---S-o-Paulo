@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplicação para resolver desafios técnicos com JavaScript">
+  <meta name="keywords" content="JavaScript, Desafios, Programação, Front-end">
+  <title>Estágio - São Paulo</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="bg-primary text-white text-center py-3">
+    <h1>Estágio - São Paulo</h1>
+  </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Desafios</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="showResponse('response1')">Resposta 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="showResponse('response2')">Resposta 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="showResponse('response3')">Resposta 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="showResponse('response4')">Resposta 4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="showResponse('response5')">Resposta 5</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main class="container mt-4">
+    <section id="response1" class="response d-none">
+      <h2>Resposta 1</h2>
+      <p>Observe o trecho de código abaixo e determine o valor da variável SOMA.</p>
+      <pre>
+        <code>
+int INDICE = 13, SOMA = 0, K = 0;
+while (K &lt; INDICE) {
+  K = K + 1;
+  SOMA = SOMA + K;
+}
+Imprimir(SOMA);
+        </code>
+      </pre>
+      <button class="btn btn-primary" onclick="calculateSoma()">Calcular SOMA</button>
+      <p id="somaResult"></p>
+    </section>
+    <section id="response2" class="response d-none">
+      <h2>Resposta 2</h2>
+      <p>Dado um número, verifique se ele pertence à sequência de Fibonacci.</p>
+      <input type="number" id="fibonacciNumber" class="form-control mb-2" placeholder="Digite um número">
+      <button class="btn btn-primary" onclick="checkFibonacci()">Verificar Fibonacci</button>
+      <p id="fibonacciResult"></p>
+    </section>
+    <section id="response3" class="response d-none">
+      <h2>Resposta 3</h2>
+      <p>Adicione o faturamento diário e processe os dados.</p>
+      <div class="form-group">
+        <label for="day1">Faturamento do dia 1</label>
+        <input type="number" id="day1" class="form-control mb-2" placeholder="Faturamento do dia 1">
+      </div>
+      <div class="form-group">
+        <label for="day2">Faturamento do dia 2</label>
+        <input type="number" id="day2" class="form-control mb-2" placeholder="Faturamento do dia 2">
+      </div>
+      <!-- mais campos se necessário -->
+      <button class="btn btn-primary" onclick="saveAndProcessBilling()">Salvar e Processar</button>
+      <p id="billingResult"></p>
+    </section>
+    <section id="response4" class="response d-none">
+      <h2>Resposta 4</h2>
+      <p>Calcule o percentual de representação por estado.</p>
+      <div id="stateValues">
+        <p><strong>Faturamento por estado:</strong></p>
+        <ul>
+          <li>SP: R$67.836,43</li>
+          <li>RJ: R$36.678,66</li>
+          <li>MG: R$29.229,88</li>
+          <li>ES: R$27.165,48</li>
+          <li>Outros: R$19.849,53</li>
+        </ul>
+      </div>
+      <button class="btn btn-primary" onclick="calculatePercentage()">Calcular Percentual</button>
+      <p id="percentageResult"></p>
+    </section>
+    <section id="response5" class="response d-none">
+      <h2>Resposta 5</h2>
+      <p>Inverta os caracteres de uma string.</p>
+      <input type="text" id="stringInput" class="form-control mb-2" placeholder="Digite uma string">
+      <button class="btn btn-primary" onclick="reverseString()">Inverter String</button>
+      <p id="stringResult"></p>
+    </section>
+  </main>
+  <footer class="bg-light text-center py-3">
+    <p>&copy; 2024 Estágio - São Paulo</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
